@@ -34,7 +34,11 @@
                             <label>Hasło:</label><input id="password" type="password" name="password" placeholder="Hasło">
                             <label>Zawartość skrytki:</label><input id="items" placeholder="Zawartość">
                         </form>
-                        <div id="info">*Hasło musi zawierać co najmniej jedną dużą literę, jedną małą literę i jedną cyfrę lub znak specjalny</div>
+                        <div id="info">Hasło musi mieć co najmniej:<ul><li>8 znaków</li>
+                            <li>jedną dużą literę</li>
+                            <li>jedną małą literę</li>
+                            <li>jedną cyfrę lub znak specjalny</li></ul>
+                        Chcesz dodać kilka elementów do skrytki? Oddziel je przecinkami.</div>
                     </div>
                     <button type="button" onclick="dodajSkrytke()">Dodaj skrytkę</button>
                     <div id="dodaj-msg"></div>
@@ -59,6 +63,9 @@
             </td>
         </tr>
     </table>
+</div>
+<div>
+    Tu będzie info o stronie
 </div>
 </body>
 </html>

@@ -20,6 +20,9 @@ function dodajSkrytke() {
         alert("Podaj numer skrytki");
         //$("#dodaj-msg").text("Podaj numer skrytki");
     }
+    else if (!testID(temp.id)){
+        alert("Numer skrytki musi zawierać tylko cyfry");
+    }
     else if (!temp.pass) {
         alert("Podaj hasło do skrytki");
     }
@@ -68,8 +71,15 @@ function wypiszZawartosc() {
 }
 
 function testPassword(pass) {
-    let pattern = new RegExp("[a-zA-Z\d\W]+");
-    return pattern.test(pass);
+    if(pass.length>7){
+        let pattern = new RegExp("[a-zA-Z\d\W]+");
+        return pattern.test(pass);
+    }
+}
+
+function testID(id) {
+    let pattern = new RegExp("^[0-9]+$");
+    return pattern.test(id);
 }
 
 function dodajItem() {
