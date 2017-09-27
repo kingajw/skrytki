@@ -67,7 +67,7 @@ table {
     text-align: center;
 }
 
-td {
+.two-columns {
     width: 50%;
 }
 
@@ -96,4 +96,28 @@ tr>td {
 #info {
     font-size: small;
     text-align: left;
+}
+
+#disclaimer-img {
+    width: 20%;
+}
+
+#disclaimer-img>img {
+    width: 10%;
+}
+
+.two-columns>img {
+    width: 10%;
+}
+.algn-right {
+    text-align: right;
+    width: 30%;
+}
+
+.algn-left {
+    text-align: left;
+}
+#nazwa {
+    font-family: 'Righteous', sans-serif;
+    font-size: 280%;
 }
