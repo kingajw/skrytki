@@ -1,0 +1,98 @@
+body {
+    color: darkslategray;
+    font-family: 'Lato', sans-serif;
+}
+
+#dodano {
+    display: inline-block;
+}
+#alert {
+    padding: 2%;
+    background-color: #4caf50;
+    color: #fff;
+    margin-bottom: 3%;
+    display: none;
+}
+
+.closebtn {
+    margin-left: 2%;
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background: #e6f2fa;
+    background-image: -webkit-linear-gradient(top, #e6f2fa, #6dabd1);
+    background-image: -moz-linear-gradient(top, #e6f2fa, #6dabd1);
+    background-image: -ms-linear-gradient(top, #e6f2fa, #6dabd1);
+    background-image: -o-linear-gradient(top, #e6f2fa, #6dabd1);
+    background-image: linear-gradient(to bottom, #e6f2fa, #6dabd1);
+    -webkit-border-radius: 8%;
+    -moz-border-radius: 8%;
+    border-radius: 8px;
+    font-family: Lato, sans-serif;
+    color: darkslategrey;
+    padding: 1% 2% 1% 2%;
+    text-decoration: none;
+    margin: 2% 0 2% 0;
+}
+
+.main {
+    font-weight: bold;
+    font-size: larger;
+    padding: 2% 3% 2% 3%;
+}
+
+button:hover {
+    background: #5997bd;
+    background-image: -webkit-linear-gradient(top, #5997bd, #41a7eb);
+    background-image: -moz-linear-gradient(top, #5997bd, #41a7eb);
+    background-image: -ms-linear-gradient(top, #5997bd, #41a7eb);
+    background-image: -o-linear-gradient(top, #5997bd, #41a7eb);
+    background-image: linear-gradient(to bottom, #5997bd, #41a7eb);
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+td {
+    width: 50%;
+}
+
+tr>td {
+    padding-bottom: 2%;
+}
+
+#utworzNowa, #otworzIstniejaca {
+    display: none;
+}
+
+.container label {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    padding: 1% 1% 1% 1%;
+}
+
+.container input {
+    display: inline-block;
+    width: 40%;
+    clear: right;
+    padding: 1% 1% 1% 1%;
+}
+
+#info {
+    font-size: small;
+}

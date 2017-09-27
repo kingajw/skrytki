@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl-PL">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+<div id="alert"><div id="dodano"></div>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>
+<div>
+    <h1>Co chcesz zrobić?</h1>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>
+                <button id="utworz" class="main" type="button" onclick="pokazNowa(this)">Utwórz nową skrytkę</button>
+            </td>
+            <td>
+                <button id="otworz" class="main" type="button" onclick="pokazNowa(this)">Otwórz istniejącą skrytkę</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="utworzNowa">
+                    <div class="container">
+                        <form>
+                            <label>Numer skrytki:</label><input id="id" placeholder="ID">
+                            <label>Hasło:</label><input id="password" type="password" name="password" placeholder="Hasło">
+                            <label>Zawartość skrytki:</label><input id="items" placeholder="Zawartość">
+                        </form>
+                        <div id="info">*Hasło musi zawierać co najmniej jedną dużą literę, jedną małą literę i jedną cyfrę lub znak specjalny</div>
+                    </div>
+                    <button type="button" onclick="dodajSkrytke()">Dodaj skrytkę</button>
+                    <div id="dodaj-msg"></div>
+                </div>
+            </td>
+            <td>
+                <div id="otworzIstniejaca">
+                    <div class="container">
+                    <form>
+                        <label>Numer skrytki:</label><input id="id_search" placeholder="ID">
+                        <label>Hasło:</label><input id="password_search" type="password" name="password" placeholder="Hasło">
+                    </form>
+                    <button type="button" onclick="wypiszZawartosc()">Otwórz skrytkę</button>
+                    <div id="wynik"></div>
+                    <div>
+                        <label>Przedmiot do dodania/usunięcia:</label><input id="newItem" placeholder="Przedmiot">
+                        <button type="button" onclick="dodajItem()">Dodaj przedmiot</button>
+                        <button type="button" onclick="usunItem()">Usuń przedmiot</button>
+                    </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
