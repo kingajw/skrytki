@@ -1,6 +1,8 @@
 body {
     color: darkslategray;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Anaheim', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 #dodano {
@@ -14,7 +16,7 @@ body {
     display: none;
 }
 
-.closebtn {
+.close_button {
     margin-left: 2%;
     color: #fff;
     font-weight: bold;
@@ -25,7 +27,24 @@ body {
 }
 
 h1 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 280%;
+}
+
+h2 {
+    padding-top: 2%;
+    width: 100%;
     text-align: center;
+}
+
+.align-left {
+    align-content: left;
+    text-align: left;
+}
+
+.align-right {
+    align-content: right;
+    text-align: right;
 }
 
 button {
@@ -38,11 +57,11 @@ button {
     -webkit-border-radius: 8%;
     -moz-border-radius: 8%;
     border-radius: 8px;
-    font-family: Lato, sans-serif;
     color: darkslategrey;
     padding: 1% 2% 1% 2%;
     text-decoration: none;
     margin: 2% 0 2% 0;
+    border: none;
 }
 
 .main {
@@ -61,32 +80,18 @@ button:hover {
     text-decoration: none;
 }
 
-table {
-    width: 100%;
-    align-content: center;
-    text-align: center;
-}
-
-.two-columns {
-    width: 50%;
-}
-
-tr>td {
-    padding-bottom: 2%;
-}
-
 #utworzNowa, #otworzIstniejaca {
     display: none;
 }
 
-.container label {
+label {
     display: inline-block;
     width: 40%;
     text-align: right;
     padding: 1% 1% 1% 1%;
 }
 
-.container input {
+input {
     display: inline-block;
     width: 40%;
     clear: right;
@@ -98,26 +103,17 @@ tr>td {
     text-align: left;
 }
 
-#disclaimer-img {
-    width: 20%;
+img {
+    width: 12%;
+    padding-top: 1%;
 }
 
-#disclaimer-img>img {
-    width: 10%;
+.bottom {
+    position: fixed;
+    bottom: 0;
 }
 
-.two-columns>img {
-    width: 10%;
-}
-.algn-right {
-    text-align: right;
-    width: 30%;
-}
-
-.algn-left {
-    text-align: left;
-}
-#nazwa {
-    font-family: 'Righteous', sans-serif;
-    font-size: 280%;
+#wynik {
+    padding-bottom: 2%;
+    font-weight: bold;
 }

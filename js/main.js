@@ -10,6 +10,8 @@ class Skrytka {
 var skrytki = [];
 var otwarta = new Skrytka();
 
+//dodawanie i otwieranie skrytek
+
 function dodajSkrytke() {
     let temp = new Skrytka();
     temp.id = $("#id").val();
@@ -18,13 +20,13 @@ function dodajSkrytke() {
     temp.item = itemki.split(",");
     if (!temp.id) {
         alert("Podaj numer skrytki");
-        //$("#dodaj-msg").text("Podaj numer skrytki");
     }
     else if (!testID(temp.id)){
         alert("Numer skrytki musi zawierać tylko cyfry");
     }
-    else if (!temp.pass) {
-        alert("Podaj hasło do skrytki");
+    else if (!testPassword(temp.pass)) {
+        alert("Nieprawidłowe hasło");
+        //document.getElementById("info").style.color='red';
     }
     else if (!itemki) {
         alert("Skrytka nie może być pusta");
@@ -34,9 +36,9 @@ function dodajSkrytke() {
             return obj.id===temp.id;
         })
         if (skrytka !== undefined) {
-            alert("Skrytka już istnieje");
+            alert("Skrytka o takim numerze już istnieje");
         }
-        else if (testPassword(temp.pass)) {
+        else {
             skrytki.push(temp);
             document.getElementById("alert").style.display='block';
             $("#dodano").text("Dodano skrytkę nr "+temp.id);
@@ -44,10 +46,6 @@ function dodajSkrytke() {
             $("#id").val('');
             $("#password").val('');
             $("#items").val('');
-        }
-        else {
-            document.getElementById("info").style.color='red';
-            //$("#dodaj-msg").text("Błędne hasło!");
         }
     }
 }
@@ -59,16 +57,18 @@ function wypiszZawartosc() {
         return obj.id === otwarta.id;
     });
     if (skrytka === undefined) {
-        $("#wynik").text("Nie ma takiej skrytki :(")
+        alert("Nie ma takiej skrytki :(")
     }
     else if (skrytka.pass === otwarta.pass) {
         $("#wynik").text(skrytka.item);
     }
     else
     {
-        $("#wynik").text("Nieprawidłowe hasło");
+        alert("Nieprawidłowe hasło!");
     }
 }
+
+//funkcje pomocnicze
 
 function testPassword(pass) {
     if(pass.length>7){
@@ -100,9 +100,13 @@ function usunItem() {
             this.item.splice(index,1);
             $("#wynik").text(this.item);
         }
+        else {
+            alert("Nie ma takiego elementu w skrytce");
+        }
     })
 }
 
+// pokaz odpowiednia sekcje po kliknieciu utworz/otworz
 function pokazNowa(elem) {
     let utworz=document.getElementById("utworzNowa");
     let otworz=document.getElementById("otworzIstniejaca");
